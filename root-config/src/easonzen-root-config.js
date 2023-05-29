@@ -24,6 +24,12 @@ registerApplication({
   activeWhen: (location) => location.pathname.startsWith("/vue2"),
 });
 
+registerApplication({
+  name: "@easonzen/vite-project",
+  app: () => System.import("@easonzen/vite-project"),
+  activeWhen: (location) => location.pathname.startsWith("/vite"),
+});
+
 start({
   urlRerouteOnly: true,
 });
