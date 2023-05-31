@@ -1,11 +1,8 @@
-import '@/assets/main.css'
 import { createApp, h } from 'vue'
 import App from './App.vue'
 import singleSpaVue from 'single-spa-vue'
 
 import router from './router'
-
-// createApp(App).mount('#app')
 
 const vueLifecycles = singleSpaVue({
   createApp,
@@ -27,6 +24,7 @@ const vueLifecycles = singleSpaVue({
   //     // app.use(router);
   //   }
 })
+
 export const bootstrap = vueLifecycles.bootstrap
 export const mount = vueLifecycles.mount
 export const unmount = vueLifecycles.unmount
